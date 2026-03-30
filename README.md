@@ -19,7 +19,7 @@
 
 ## 📌 Project Overview
 
-In this project I designed, deployed and systematically attacked an insecure Generative AI application on AWS to identify, exploit and remediate security vulnerabilities unique to agentic AI systems.
+In this project I designed, deployed and systematically attacked (Pen tested) an insecure Generative AI application on AWS to identify, exploit and remediate security vulnerabilities unique to agentic AI systems.
 
 The application - a GenAI-powered internal knowledge assistant built on Amazon Bedrock - was built with infrastructure misconfigurations, insecure IAM policies and prompt injection vulnerabilities.
 
