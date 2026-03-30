@@ -76,27 +76,27 @@ pie title Vulnerabilities by Layer
 
 | # | Vulnerability | Severity | OWASP LLM Ref |
 |---|---|---|---|
-| INF-001 | Wildcard IAM permissions on Lambda execution role | 🔴 Critical | LLM07 — Insecure Plugin Design |
-| INF-002 | No encryption at rest on DynamoDB table | 🟠 High | LLM06 — Sensitive Information Disclosure |
-| INF-003 | API Gateway deployed with no authentication or authorisation | 🔴 Critical | LLM07 — Insecure Plugin Design |
-| INF-004 | No rate limiting or throttling on the public API endpoint | 🟠 High | LLM04 — Model Denial of Service |
+| INF-001 | Wildcard IAM permissions on Lambda execution role | 🔴 Critical | LLM07 - Insecure Plugin Design |
+| INF-002 | No encryption at rest on DynamoDB table | 🟠 High | LLM06 - Sensitive Information Disclosure |
+| INF-003 | API Gateway deployed with no authentication or authorisation | 🔴 Critical | LLM07 - Insecure Plugin Design |
+| INF-004 | No rate limiting or throttling on the public API endpoint | 🟠 High | LLM04 - Model Denial of Service |
 
 ### Application Code - 4 Vulnerabilities
 
 | # | Vulnerability | Severity | OWASP LLM Ref |
 |---|---|---|---|
-| APP-001 | User input injected directly into Bedrock prompt with no sanitisation | 🔴 Critical | LLM01 — Prompt Injection |
-| APP-002 | No output filtering or content moderation on AI responses | 🟠 High | LLM02 — Insecure Output Handling |
-| APP-003 | Sensitive data (credentials, API keys) written to CloudWatch Logs | 🟠 High | LLM06 — Sensitive Information Disclosure |
-| APP-004 | Verbose error messages exposing Lambda internals and stack traces | 🟡 Medium | LLM06 — Sensitive Information Disclosure |
+| APP-001 | User input injected directly into Bedrock prompt with no sanitisation | 🔴 Critical | LLM01 - Prompt Injection |
+| APP-002 | No output filtering or content moderation on AI responses | 🟠 High | LLM02 - Insecure Output Handling |
+| APP-003 | Sensitive data (credentials, API keys) written to CloudWatch Logs | 🟠 High | LLM06 - Sensitive Information Disclosure |
+| APP-004 | Verbose error messages exposing Lambda internals and stack traces | 🟡 Medium | LLM06 - Sensitive Information Disclosure |
 
 ### GenAI-Specific - 3 Vulnerabilities
 
 | # | Vulnerability | Severity | OWASP LLM Ref |
 |---|---|---|---|
-| GEN-001 | No trust boundary between user input and system prompt | 🔴 Critical | LLM01 — Prompt Injection |
-| GEN-002 | Internal DynamoDB documentation directly exposed to the AI model | 🟠 High | LLM06 — Sensitive Information Disclosure |
-| GEN-003 | No monitoring or alerting for adversarial prompt patterns | 🟡 Medium | LLM09 — Misinformation |
+| GEN-001 | No trust boundary between user input and system prompt | 🔴 Critical | LLM01 - Prompt Injection |
+| GEN-002 | Internal DynamoDB documentation directly exposed to the AI model | 🟠 High | LLM06 - Sensitive Information Disclosure |
+| GEN-003 | No monitoring or alerting for adversarial prompt patterns | 🟡 Medium | LLM09 - Misinformation |
 
 ---
 
