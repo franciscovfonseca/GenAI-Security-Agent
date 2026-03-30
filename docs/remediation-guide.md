@@ -1,4 +1,4 @@
-# Remediation Guide — GenAI Security Assessment
+# Remediation Guide - GenAI Security Assessment
 
 **Assessment Target:** GenAI Internal Knowledge Assistant (Amazon Bedrock)  
 **Analyst:** Francisco Fonseca  
@@ -26,9 +26,9 @@ Address findings in this order. The Critical findings in Infrastructure and GenA
 
 ---
 
-## Phase 1 — Critical: Stop the Bleeding
+## Phase 1 - Critical: Stop the Bleeding
 
-### Fix 1 — Add API Authentication (INF-003)
+### Fix 1 - Add API Authentication (INF-003)
 
 **Time to implement:** 1–2 hours  
 **AWS Service:** Amazon Cognito + API Gateway
@@ -51,7 +51,7 @@ resource "aws_api_gateway_method" "query" {
 }
 ```
 
-### Fix 2 — Separate System Prompt from User Input (GEN-001 / APP-001)
+### Fix 2 - Separate System Prompt from User Input (GEN-001 / APP-001)
 
 **Time to implement:** 30 minutes  
 **AWS Service:** Amazon Bedrock (Messages API)
@@ -110,7 +110,7 @@ def query_bedrock(user_input: str) -> str:
     return json.loads(response["body"].read())["content"][0]["text"]
 ```
 
-### Fix 3 — Apply Least-Privilege IAM (INF-001)
+### Fix 3 - Apply Least-Privilege IAM (INF-001)
 
 **Time to implement:** 1 hour  
 **AWS Service:** AWS IAM
@@ -145,9 +145,9 @@ Replace wildcard permissions with scoped policies:
 
 ---
 
-## Phase 2 — High: Defence in Depth
+## Phase 2 - High: Defence in Depth
 
-### Fix 4 — Enable Amazon Bedrock Guardrails (APP-002)
+### Fix 4 - Enable Amazon Bedrock Guardrails (APP-002)
 
 ```python
 response = bedrock.invoke_model(
@@ -168,7 +168,7 @@ Configure the guardrail in the AWS Console or via Terraform to:
 - Block prompt injection patterns
 - Deny topics outside the allowed scope (HR policies only)
 
-### Fix 5 — Structured Logging — No Sensitive Data (APP-003)
+### Fix 5 - Structured Logging — No Sensitive Data (APP-003)
 
 ```python
 import logging
@@ -197,7 +197,7 @@ structured_log("INFO", "Bedrock invocation complete",
 )
 ```
 
-### Fix 6 — Implement RAG with Document Filtering (GEN-002)
+### Fix 6 - Implement RAG with Document Filtering (GEN-002)
 
 Rather than loading the entire DynamoDB table into the prompt context, implement semantic search to retrieve only the top-k most relevant document chunks:
 
@@ -226,9 +226,9 @@ kb_response = bedrock_agent.retrieve(
 
 ---
 
-## Phase 3 — Medium: Monitoring and Hardening
+## Phase 3 - Medium: Monitoring and Hardening
 
-### Fix 7 — Add DynamoDB KMS Encryption (INF-002)
+### Fix 7 - Add DynamoDB KMS Encryption (INF-002)
 
 ```hcl
 resource "aws_kms_key" "dynamodb" {
@@ -249,7 +249,7 @@ resource "aws_dynamodb_table" "knowledge_base" {
 }
 ```
 
-### Fix 8 — Add API Rate Limiting (INF-004)
+### Fix 8 - Add API Rate Limiting (INF-004)
 
 ```hcl
 resource "aws_api_gateway_usage_plan" "standard" {
@@ -272,7 +272,7 @@ resource "aws_api_gateway_usage_plan" "standard" {
 }
 ```
 
-### Fix 9 — Adversarial Prompt Monitoring (GEN-003)
+### Fix 9 - Adversarial Prompt Monitoring (GEN-003)
 
 ```python
 # CloudWatch custom metric for detected injection attempts
