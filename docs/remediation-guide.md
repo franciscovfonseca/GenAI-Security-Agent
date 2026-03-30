@@ -168,7 +168,7 @@ Configure the guardrail in the AWS Console or via Terraform to:
 - Block prompt injection patterns
 - Deny topics outside the allowed scope (HR policies only)
 
-### Fix 5 - Structured Logging — No Sensitive Data (APP-003)
+### Fix 5 - Structured Logging - No Sensitive Data (APP-003)
 
 ```python
 import logging
