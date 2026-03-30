@@ -72,7 +72,7 @@ pie title Vulnerabilities by Layer
     "GenAI-Specific" : 3
 ```
 
-### Infrastructure & IAM — 4 Vulnerabilities
+### Infrastructure & IAM - 4 Vulnerabilities
 
 | # | Vulnerability | Severity | OWASP LLM Ref |
 |---|---|---|---|
@@ -81,7 +81,7 @@ pie title Vulnerabilities by Layer
 | INF-003 | API Gateway deployed with no authentication or authorisation | 🔴 Critical | LLM07 — Insecure Plugin Design |
 | INF-004 | No rate limiting or throttling on the public API endpoint | 🟠 High | LLM04 — Model Denial of Service |
 
-### Application Code — 4 Vulnerabilities
+### Application Code - 4 Vulnerabilities
 
 | # | Vulnerability | Severity | OWASP LLM Ref |
 |---|---|---|---|
@@ -90,7 +90,7 @@ pie title Vulnerabilities by Layer
 | APP-003 | Sensitive data (credentials, API keys) written to CloudWatch Logs | 🟠 High | LLM06 — Sensitive Information Disclosure |
 | APP-004 | Verbose error messages exposing Lambda internals and stack traces | 🟡 Medium | LLM06 — Sensitive Information Disclosure |
 
-### GenAI-Specific — 3 Vulnerabilities
+### GenAI-Specific - 3 Vulnerabilities
 
 | # | Vulnerability | Severity | OWASP LLM Ref |
 |---|---|---|---|
