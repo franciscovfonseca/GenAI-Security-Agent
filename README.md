@@ -9,6 +9,10 @@
 [![OWASP LLM Top 10](https://img.shields.io/badge/OWASP-LLM%20Top%2010-000000?style=for-the-badge&logo=owasp&logoColor=white)](https://owasp.org/www-project-top-10-for-large-language-model-applications/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
 
+<br/>
+
+![Banner](screenshots/banner.svg)
+
 </div>
 
 ---
@@ -143,13 +147,11 @@ The Lambda execution role was configured with wildcard resource permissions:
 }
 ```
 
-This grants the Lambda function — and by extension any successful prompt injection attack — full access to every DynamoDB table, S3 bucket, and Bedrock model in the AWS account. A least-privilege policy would restrict access to the specific table ARN and the specific Bedrock model ID only.
+This grants the Lambda function — and by extension any successful prompt injection attack — full access to every DynamoDB table, S3 bucket, and Bedrock model in the AWS account.
 
 ---
 
 ## 🗺️ OWASP LLM Top 10 Coverage
-
-The assessment mapped all findings to the OWASP Top 10 for Large Language Model Applications:
 
 ```mermaid
 flowchart TD
@@ -171,8 +173,6 @@ flowchart TD
 ---
 
 ## 🔒 Secure Architecture — After Remediation
-
-The remediated architecture addresses every identified vulnerability with specific AWS controls:
 
 ```mermaid
 flowchart LR
@@ -210,8 +210,6 @@ flowchart LR
 
 ## 🧰 Tools & Technologies
 
-<div align="center">
-
 | Layer | Technology |
 |---|---|
 | Cloud Platform | AWS (Lambda, API Gateway, DynamoDB, Bedrock, IAM, CloudWatch) |
@@ -221,8 +219,6 @@ flowchart LR
 | Security Assessment | AWS Security Agent |
 | Vulnerability Framework | OWASP LLM Top 10 |
 | Attack Methods | Prompt Injection, Role Manipulation, Data Exfiltration |
-
-</div>
 
 ---
 
@@ -247,7 +243,7 @@ GenAI-Security-Agent/
 │   ├── vulnerability-report.md      ← Full vulnerability findings with severity ratings
 │   └── remediation-guide.md         ← Detailed remediation steps per finding
 ├── screenshots/
-│   └── README.md                    ← Screenshot reference guide
+│   └── banner.svg                   ← Project banner
 └── LICENSE
 ```
 
