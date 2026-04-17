@@ -72,7 +72,7 @@ pie title Vulnerabilities by Layer
     "GenAI-Specific" : 3
 ```
 
-### Infrastructure & IAM - 4 Vulnerabilities
+### Infrastructure & IAM - 3 Vulnerabilities
 
 | # | Vulnerability | Severity | OWASP LLM Ref |
 |---|---|---|---|
