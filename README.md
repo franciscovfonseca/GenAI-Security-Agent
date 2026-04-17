@@ -11,8 +11,6 @@
 
 <br/>
 
-![Banner](screenshots/banner.svg)
-
 </div>
 
 ---
