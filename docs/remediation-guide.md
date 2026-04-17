@@ -202,7 +202,7 @@ structured_log("INFO", "Bedrock invocation complete",
 Rather than loading the entire DynamoDB table into the prompt context, implement semantic search to retrieve only the top-k most relevant document chunks:
 
 1. Use Amazon Bedrock Knowledge Bases (managed RAG) or a vector store (OpenSearch Serverless)
-2. Apply document-level classification — documents tagged `classification: sensitive` are excluded from the retrieval index entirely
+2. Apply document-level classification - documents tagged `classification: sensitive` are excluded from the retrieval index entirely
 3. Limit retrieved context to 2–3 chunks maximum per query
 
 ```python
